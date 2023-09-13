@@ -22,7 +22,6 @@ jobs:
           NAME: necofuryai
           EMAIL: ${{secrets.MAIL}}
           REPO_FORK: https://github.com/anuraghazra/github-readme-stats.git
-        # 追従処理
         run: |
           git config --global user.name ${NAME}
           git config --global user.email ${EMAIL}
