@@ -1,0 +1,39 @@
+name: Merge upstream branches
+on:
+  schedule:
+    #         ┌───────────── minute (0 - 59)
+    #         │ ┌───────────── hour (0 - 23)
+    #         │ │ ┌───────────── day of the month (1 - 31)
+    #         │ │ │ ┌───────────── month (1 - 12 or JAN-DEC)
+    #         │ │ │ │ ┌───────────── day of the week (0 - 6 or SUN-SAT)
+    #         │ │ │ │ │                                   
+    #         │ │ │ │ │
+    #         │ │ │ │ │
+    #         * * * * *
+    - cron:  "0 */24 * * *"
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Merge upstream
+        env:
+          NAME: necofuryai
+          EMAIL: ${{secrets.MAIL}}
+          REPO_FORK: https://github.com/anuraghazra/github-readme-stats.git
+        run: |
+          git config --global user.name ${NAME}
+          git config --global user.email ${EMAIL}
+          
+          git config --global pull.rebase merges
+          
+          git pull --unshallow
+          
+          git remote add upstream ${REPO_FORK}
+          
+          git fetch upstream
+          
+          git checkout master
+          git merge --no-edit upstream/master
+          git push origin master
