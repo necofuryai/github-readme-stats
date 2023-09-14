@@ -13,7 +13,3 @@ vercel_token
 *.code-workspace
 
 .vercel
-
-# GitHub Actions
-.github/workflows/*
-!.github/workflows/scheduled_sync.yml
