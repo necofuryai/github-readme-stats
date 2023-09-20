@@ -19,7 +19,6 @@ permissions:
   repository-projects: read
   security-events: read
   statuses: read
-  workflows: read
 
 jobs:
   closeEmptyIssuesAndTemplates:
@@ -33,7 +32,7 @@ jobs:
       - name: Run empty issues closer action
         uses: rickstaa/empty-issues-closer-action@1f356958abb6f3ead7f1ee451b4129aa0c31efe7 # v1.1.18
         env:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.WORKFLOW_TOKEN }}
         with:
           close_comment:
             Closing this issue because it appears to be empty. Please update the
