@@ -18,9 +18,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Merge upstream
         with:
           token: ${{ secrets.WORKFLOW_TOKEN }}
+      - name: Merge upstream
         env:
           NAME: necofuryai
           EMAIL: ${{secrets.MAIL}}
