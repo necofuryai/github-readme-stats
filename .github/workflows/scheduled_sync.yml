@@ -19,6 +19,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Merge upstream
+        with:
+          token: ${{ secrets.WORKFLOW_TOKEN }}
         env:
           NAME: necofuryai
           EMAIL: ${{secrets.MAIL}}
