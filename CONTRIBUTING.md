@@ -47,7 +47,7 @@ GitHub Readme Stats supports custom theming, and you can also contribute new the
 > [!NOTE]\
 > If you are contributing your theme just because you are using it personally, then you can [customize the looks](./readme.md#customization) of your card with URL params instead.
 
-> [!NOTE]\
+> [!WARNING]\
 > Keep in mind that we already have a vast collection of different themes. To keep their number manageable, we began to add only themes supported by the community. Your pull request with theme addition will be merged once we get enough positive feedback from the community in the form of thumbs up :+1: emojis (see [#1935](https://github.com/anuraghazra/github-readme-stats/issues/1935#top-themes-prs)). We expect to see at least 10-15 thumbs up before making a decision to merge your pull request into the master branch. Remember that you can also support themes of other contributors that you liked to speed up their merge.
 
 > [!NOTE]\
@@ -63,7 +63,7 @@ To contribute your language you need to edit the [src/translations.js](./src/tra
 
 ## Any contributions you make will be under the MIT Software License
 
-In short, when you submit changes, your submissions are understood to be under the same [MIT License](http://choosealicense.com/licenses/mit/) that covers the project. Feel free to contact the maintainers if that's a concern.
+In short, when you submit changes, your submissions are understood to be under the same [MIT License](https://choosealicense.com/licenses/mit/) that covers the project. Feel free to contact the maintainers if that's a concern.
 
 ## Report issues/bugs using GitHub's [issues](https://github.com/anuraghazra/github-readme-stats/issues)
 
